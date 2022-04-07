@@ -1,0 +1,219 @@
+@import "partials/variables";
+@import "partials/mixins";  
+@import "partials/functions";
+
+body {
+    background: $main-color !important;
+}
+
+.containerStyle {
+    margin: 20px 20px 20px 20px;
+    background-color: $secondary-color;
+    @include borderStyle (0, 20px);
+}
+
+.navbar {
+    margin: $navbarMargin;
+}
+
+.aboutMeStyle {
+    border: none !important;  
+    padding: 80px 20px 80px 20px !important;
+    width: 700px !important;
+}
+
+.referenceRowStyle {
+    padding: 40px 10px 40px 120px !important;
+}
+
+.referenceCardStyle {
+    @include borderStyle (0, 20px !important);
+    border-top-left-radius: $borderTopLeftRadius;
+    border-top-right-radius: $borderTopRightRadius;
+    margin-bottom: 20px !important;
+}
+
+.referenceCardStyle:hover {
+    transition: transform 1s;
+    @include shadow(0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06));
+}
+
+h1, h2, p {
+    color: $text-color;
+}
+
+h6::after {
+    content: "";
+    display: $displayBlock;
+    width: 32px;
+    padding-top: 3px;
+    border-bottom: 4px solid $main-color;
+}
+
+.littleTalk {
+    margin-top: 50px;
+}
+
+.cardTitleHeadlines {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.cardTitleStyle {
+    text-align: center;
+}
+
+.cardTextStyle {
+    text-align: center;
+}
+
+.card:hover {
+    @include borderStyle(3px solid $main-color, 0);
+}
+
+.card-img {
+    height: 80%;
+}
+
+.linkStyle {
+    text-decoration: none;
+    color: $text-color;
+}
+
+.linkStyle:hover {
+    color: $main-color;
+}
+
+.cardTimeline {
+    @include borderStyle (none !important, 0)
+}
+
+.timeline {
+    margin: 0 auto;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 1.03em;
+    padding: 40px;
+    list-style: none;
+    text-align: left;
+    max-width: 50%;
+    @include borderStyle (none !important, 0)
+}
+
+@media (max-width: 767px) {
+    .timeline {
+        max-width: 98%;
+        padding: 25px;
+    }
+}
+
+.timeline h1 {
+    font-weight: 300;
+    font-size: 1.4em;
+}
+
+.timeline h2,
+.timeline h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.timeline .event {
+    border-bottom: 1px dashed $main-color;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .timeline .event {
+        padding-top: 30px;
+    }
+}
+
+.timeline .event:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    @include borderStyle (none !important, 0)
+}
+
+.timeline .event:before,
+.timeline .event:after {
+    position: absolute;
+    display: $displayBlock;
+    top: 0;
+}
+
+.timeline .event:before {
+    left: -207px;
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 120px;
+}
+
+@media (max-width: 767px) {
+    .timeline .event:before {
+        left: 0px;
+        text-align: left;
+    }
+}
+
+.timeline .event:after {
+    -webkit-box-shadow: 0 0 0 3px $main-color;
+    box-shadow: 0 0 0 3px $main-color;
+    left: -55.8px;
+    background: #fff;
+    @include borderStyle (0, 50%);
+    height: 9px;
+    width: 9px;
+    content: "";
+    top: 5px;
+}
+
+@media (max-width: 767px) {
+    .timeline .event:after {
+        left: -31.8px;
+    }
+}
+
+.codeStyle {
+    float:right; 
+    text-align:right;
+}
+
+.form-control:focus {
+    @include borderStyle (1px solid $main-color !important, 0);
+    @include shadow(0 0 0 0.2rem rgb(178, 230, 250) !important);
+}
+
+.bi {
+    color: $main-color;
+    font-size: $contactFontSize;
+}
+
+.biText {
+    color: $ternary-color;
+}
+
+.contactText {
+    font-size: $contactFontSize;
+    font-weight: 400;
+}
+
+.buttonStyle, .buttonStyleLink {
+    @include myButton;
+}
+
+.buttonStyle:hover, .buttonStyleLink:hover {
+    @include myButtonHover;
+}
+
+.imgStyle {
+    @include borderStyle (0, 200px !important);
+    height: $imgHeight;
+    width: $imgWidth;
+}

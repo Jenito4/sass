@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/*
+@mixin rounded($radius) {
+    border-radius: $radius;     //mixin s argumentem (zaždý si může nastavit svůj radius
+}
+*/
+body {
+  background: lightblue !important;
+}
+
+.containerStyle {
+  margin: 20px 20px 20px 20px;
+  background-color: white;
+  border: 0;
+  border-radius: 20px;
+}
+
+.navbar {
+  margin: 50px 80px 10px 80px;
+}
+
+.aboutMeStyle {
+  border: none !important;
+  padding: 80px 20px 80px 20px !important;
+  width: 700px !important;
+}
+
+.referenceRowStyle {
+  padding: 40px 10px 40px 120px !important;
+}
+
+.referenceCardStyle {
+  border: 0;
+  border-radius: 20px !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  margin-bottom: 20px !important;
+}
+
+.referenceCardStyle:hover {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+h1, h2, p {
+  color: black;
+}
+
+h6::after {
+  content: "";
+  display: block;
+  width: 32px;
+  padding-top: 3px;
+  border-bottom: 4px solid lightblue;
+}
+
+.littleTalk {
+  margin-top: 50px;
+}
+
+.cardTitleHeadlines {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.cardTitleStyle {
+  text-align: center;
+}
+
+.cardTextStyle {
+  text-align: center;
+}
+
+.card:hover {
+  border: 3px solid lightblue;
+  border-radius: 0;
+}
+
+.card-img {
+  height: 80%;
+}
+
+.linkStyle {
+  text-decoration: none;
+  color: black;
+}
+
+.linkStyle:hover {
+  color: lightblue;
+}
+
+.cardTimeline {
+  border: none !important;
+  border-radius: 0;
+}
+
+.timeline {
+  margin: 0 auto;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  padding: 40px;
+  list-style: none;
+  text-align: left;
+  max-width: 50%;
+  border: none !important;
+  border-radius: 0;
+}
+
+@media (max-width: 767px) {
+  .timeline {
+    max-width: 98%;
+    padding: 25px;
+  }
+}
+
+.timeline h1 {
+  font-weight: 300;
+  font-size: 1.4em;
+}
+
+.timeline h2,
+.timeline h3 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.timeline .event {
+  border-bottom: 1px dashed lightblue;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .timeline .event {
+    padding-top: 30px;
+  }
+}
+
+.timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none !important;
+  border-radius: 0;
+}
+
+.timeline .event:before,
+.timeline .event:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline .event:before {
+  left: -207px;
+  content: attr(data-date);
+  text-align: right;
+  font-weight: 100;
+  font-size: 0.9em;
+  min-width: 120px;
+}
+
+@media (max-width: 767px) {
+  .timeline .event:before {
+    left: 0px;
+    text-align: left;
+  }
+}
+
+.timeline .event:after {
+  -webkit-box-shadow: 0 0 0 3px lightblue;
+  box-shadow: 0 0 0 3px lightblue;
+  left: -55.8px;
+  background: #fff;
+  border: 0;
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  content: "";
+  top: 5px;
+}
+
+@media (max-width: 767px) {
+  .timeline .event:after {
+    left: -31.8px;
+  }
+}
+
+.codeStyle {
+  float: right;
+  text-align: right;
+}
+
+.form-control:focus {
+  border: 1px solid lightblue !important;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem #b2e6fa !important;
+          box-shadow: 0 0 0 0.2rem #b2e6fa !important;
+}
+
+.bi {
+  color: lightblue;
+  font-size: 25px;
+}
+
+.biText {
+  color: black;
+}
+
+.contactText {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.buttonStyle, .buttonStyleLink {
+  border-radius: 20px !important;
+  border: 1px solid lightblue;
+  background-color: lightblue !important;
+  border-color: lightblue !important;
+  padding: 10px 20px 10px 20px !important;
+}
+
+.buttonStyle:hover, .buttonStyleLink:hover {
+  border-radius: 20px !important;
+  border: 1px solid lightblue;
+  background-color: white !important;
+  border-color: lightblue !important;
+  padding: 10px 20px 10px 20px !important;
+}
+
+.imgStyle {
+  border: 0;
+  border-radius: 200px !important;
+  height: 325px !important;
+  width: 300px !important;
+}
+/*# sourceMappingURL=style.css.map */

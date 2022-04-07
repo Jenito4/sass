@@ -1,0 +1,27 @@
+@mixin rounded($radius: 20px, $border: 1px solid $main-color) {
+    border-radius: $radius;
+    border: $border;      
+}
+
+@mixin borderStyle($border, $border-radius) {
+    border: $border;
+    border-radius: $border-radius;
+}
+
+@mixin myButton {
+    @include rounded(20px !important);
+    background-color: $main-color !important;
+    border-color: $main-color !important;
+    padding: 10px 20px 10px 20px !important;
+}
+
+@mixin myButtonHover {
+    @include rounded(20px !important);
+    background-color: $secondary-color !important;
+    border-color: $main-color !important;
+    padding: 10px 20px 10px 20px !important;
+}
+
+@mixin shadow($shadows...){    
+    box-shadow: $shadows;
+}
